@@ -1,0 +1,226 @@
+@using Logistics.Api.Models.ViewModels
+@model AdminDashboardViewModel
+@{    
+    ViewData["Title"] = "系统概览";    
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";    
+}
+
+<div class="container-fluid">
+    <!-- 页面标题 -->
+    <div class="row mb-4">
+        <div class="col">
+            <h1 class="h2">@* 系统概览标题 *@ 系统概览</h1>
+            <p class="text-muted">@* 系统概览描述 *@ 查看物流管理系统的整体运行状态和关键指标</p>
+        </div>
+        <div class="col-auto">
+            <div class="text-right">
+                <span class="text-muted">@* 日期显示 *@ @DateTime.Now.ToString("yyyy年MM月dd日")</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 统计卡片 -->
+    <div class="row mb-4">
+        <!-- 用户数量卡片 -->
+        <div class="col-md-3 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="card-title mb-0">@* 用户总数标题 *@ 用户总数</h5>
+                        <span class="bg-primary/10 text-primary p-2 rounded-lg">
+                            <i class="fas fa-users"></i>
+                        </span>
+                    </div>
+                    <p class="card-text display-4 font-bold">@* 用户数量占位 *@ 156</p>
+                    <div class="text-sm text-success">
+                        <i class="fas fa-arrow-up"></i> @* 用户增长率占位 *@ 12% 较上月
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 订单数量卡片 -->
+        <div class="col-md-3 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="card-title mb-0">@* 今日订单标题 *@ 今日订单</h5>
+                        <span class="bg-warning/10 text-warning p-2 rounded-lg">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <p class="card-text display-4 font-bold">@* 订单数量占位 *@ 28</p>
+                    <div class="text-sm text-success">
+                        <i class="fas fa-arrow-up"></i> @* 订单增长率占位 *@ 8% 较昨日
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 库存产品卡片 -->
+        <div class="col-md-3 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="card-title mb-0">@* 库存产品标题 *@ 库存产品</h5>
+                        <span class="bg-success/10 text-success p-2 rounded-lg">
+                            <i class="fas fa-boxes"></i>
+                        </span>
+                    </div>
+                    <p class="card-text display-4 font-bold">@* 产品数量占位 *@ 189</p>
+                    <div class="text-sm text-danger">
+                        <i class="fas fa-arrow-down"></i> @* 产品变化率占位 *@ 3% 较上周
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 站点数量卡片 -->
+        <div class="col-md-3 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="card-title mb-0">@* 站点总数标题 *@ 站点总数</h5>
+                        <span class="bg-info/10 text-info p-2 rounded-lg">
+                            <i class="fas fa-store"></i>
+                        </span>
+                    </div>
+                    <p class="card-text display-4 font-bold">@* 站点数量占位 *@ 12</p>
+                    <div class="text-sm text-success">
+                        <i class="fas fa-arrow-up"></i> @* 站点增长率占位 *@ 1 新增站点
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 图表区域 -->
+    <div class="row mb-4">
+        <!-- 订单趋势图 -->
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">@* 订单趋势图标题 *@ 近7日订单趋势</h5>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary active">@* 日 *@ 日</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">@* 周 *@ 周</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">@* 月 *@ 月</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- 图表占位区域 -->
+                    <div class="bg-light rounded-lg p-5 text-center">
+                        <i class="fas fa-chart-line text-muted mb-2" style="font-size: 2rem;"></i>
+                        <p class="text-muted">@* 图表加载占位文本 *@ 订单趋势图表将在此显示</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 销售分类占比图 -->
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">@* 销售分类标题 *@ 销售分类占比</h5>
+                    <div class="text-sm text-muted">@* 销售周期 *@ 本月数据</div>
+                </div>
+                <div class="card-body">
+                    <!-- 图表占位区域 -->
+                    <div class="bg-light rounded-lg p-5 text-center">
+                        <i class="fas fa-chart-pie text-muted mb-2" style="font-size: 2rem;"></i>
+                        <p class="text-muted">@* 图表加载占位文本 *@ 销售分类占比图表将在此显示</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 最近活动和快速操作 -->
+    <div class="row">
+        <!-- 最近活动 -->
+        <div class="col-lg-8 mb-4">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">@* 最近活动标题 *@ 最近系统活动</h5>
+                    <a href="#" class="text-primary text-sm">@* 查看全部链接文本 *@ 查看全部</a>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>@* 操作时间列标题 *@ 操作时间</th>
+                                    <th>@* 操作人列标题 *@ 操作人</th>
+                                    <th>@* 操作类型列标题 *@ 操作类型</th>
+                                    <th>@* 操作内容列标题 *@ 操作内容</th>
+                                    <th>@* 状态列标题 *@ 状态</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- 操作记录行占位 -->
+                                <tr>
+                                    <td>@* 操作时间占位 *@ 10:32</td>
+                                    <td>@* 操作人占位 *@ 张三</td>
+                                    <td>@* 操作类型占位 *@ <span class="badge badge-primary">订单创建</span></td>
+                                    <td>@* 操作内容占位 *@ 新建订单 #ORD-20240501-001</td>
+                                    <td>@* 状态占位 *@ <span class="badge badge-success">成功</span></td>
+                                </tr>
+                                <tr>
+                                    <td>@* 操作时间占位 *@ 09:45</td>
+                                    <td>@* 操作人占位 *@ 李四</td>
+                                    <td>@* 操作类型占位 *@ <span class="badge badge-info">库存更新</span></td>
+                                    <td>@* 操作内容占位 *@ 更新产品A库存数量</td>
+                                    <td>@* 状态占位 *@ <span class="badge badge-success">成功</span></td>
+                                </tr>
+                                <tr>
+                                    <td>@* 操作时间占位 *@ 08:15</td>
+                                    <td>@* 操作人占位 *@ 王五</td>
+                                    <td>@* 操作类型占位 *@ <span class="badge badge-warning">用户注册</span></td>
+                                    <td>@* 操作内容占位 *@ 新员工注册账户</td>
+                                    <td>@* 状态占位 *@ <span class="badge badge-success">成功</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 快速操作 -->
+        <div class="col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">@* 快速操作标题 *@ 快速操作</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <a href="@Url.Action("Users", "Admin")" class="btn btn-block btn-outline-primary p-4">
+                                <i class="fas fa-user-plus mb-2"></i>
+                                <div>@* 添加用户按钮文本 *@ 添加用户</div>
+                            </a>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <a href="@Url.Action("Products", "Admin")" class="btn btn-block btn-outline-success p-4">
+                                <i class="fas fa-box-open mb-2"></i>
+                                <div>@* 添加产品按钮文本 *@ 添加产品</div>
+                            </a>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <a href="@Url.Action("Warehouses", "Admin")" class="btn btn-block btn-outline-info p-4">
+                                <i class="fas fa-warehouse mb-2"></i>
+                                <div>@* 管理仓库按钮文本 *@ 管理仓库</div>
+                            </a>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <a href="@Url.Action("Stations", "Admin")" class="btn btn-block btn-outline-warning p-4">
+                                <i class="fas fa-store mb-2"></i>
+                                <div>@* 管理站点按钮文本 *@ 管理站点</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

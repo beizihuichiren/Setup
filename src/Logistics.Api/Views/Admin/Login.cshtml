@@ -1,0 +1,29 @@
+@{ Layout = "_LayoutAdmin"; }
+<div class="auth-wrap">
+	<div class="auth-card">
+		<div class="title">管理员登录</div>
+		<div class="subtitle">请输入管理员账号与密码</div>
+		@if (!ViewData.ModelState.IsValid)
+		{
+			<div class="alert alert-danger">
+				@foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+				{
+					<div>@error.ErrorMessage</div>
+				}
+			</div>
+		}
+		<form asp-controller="Admin" asp-action="Login" method="post">
+			@Html.AntiForgeryToken()
+			<div class="mb-3">
+				<label class="form-label" for="Username">用户名</label>
+				<input class="form-control" id="Username" name="Username" required />
+			</div>
+			<div class="mb-3">
+				<label class="form-label" for="Password">密码</label>
+				<input type="password" class="form-control" id="Password" name="Password" required />
+			</div>
+			<input type="hidden" name="ReturnUrl" value="@(ViewData["ReturnUrl"]?.ToString() ?? string.Empty)" />
+			<button class="btn btn-primary w-100" type="submit">登录</button>
+		</form>
+	</div>
+</div>

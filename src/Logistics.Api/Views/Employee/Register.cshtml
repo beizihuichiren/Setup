@@ -1,0 +1,33 @@
+@{ Layout = "_LayoutEmployee"; }
+<div class="auth-wrap">
+	<div class="auth-card">
+		<div class="title">员工注册</div>
+		<div class="subtitle">请填写以下信息完成注册</div>
+		@if (!ViewData.ModelState.IsValid)
+		{
+			<div class="alert alert-danger">
+				@foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+				{
+					<div>@error.ErrorMessage</div>
+				}
+			</div>
+		}
+		<form asp-controller="Employee" asp-action="Register" method="post">
+			@Html.AntiForgeryToken()
+			<div class="mb-3">
+				<label class="form-label" for="Username">用户名</label>
+				<input class="form-control" id="Username" name="Username" required />
+			</div>
+			<div class="mb-3">
+				<label class="form-label" for="Password">密码</label>
+				<input type="password" class="form-control" id="Password" name="Password" required />
+			</div>
+			<div class="mb-3">
+				<label class="form-label" for="ConfirmPassword">确认密码</label>
+				<input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" required />
+			</div>
+			<button class="btn btn-primary w-100" type="submit">注册</button>
+			<a class="btn btn-link w-100 mt-2" asp-controller="Employee" asp-action="Login">已有账号？登录</a>
+		</form>
+	</div>
+</div>

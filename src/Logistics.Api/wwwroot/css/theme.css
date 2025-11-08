@@ -1,0 +1,147 @@
+:root{
+	--grad-start:#f59e0b; /* amber-500 */
+	--grad-end:#f97316;   /* orange-500 */
+	--surface:#ffffff;
+	--surface-muted:#fff7ed; /* amber-50 */
+	--text:#0f172a;
+	--muted:#64748b;
+	--primary:#f59e0b; /* brand primary: honey */
+	--success:#10b981;
+	--warning:#f59e0b;
+	--danger:#ef4444;
+}
+
+.brand-logo{ width:28px; height:28px; border-radius:6px; object-fit:cover; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,.06); margin-right:8px; }
+.brand-logo-lg{ width:34px; height:34px; }
+
+body{ background:var(--surface-muted); color:var(--text); }
+.navbar-gradient{
+	background: linear-gradient(90deg,var(--grad-start),var(--grad-end));
+	box-shadow: 0 4px 16px rgba(245,158,11,.25);
+}
+.card{ border:0; box-shadow:0 6px 18px rgba(2,6,23,.07); border-radius:14px; }
+.card .card-title{ font-weight:600; color:var(--muted); }
+.card .display-6{ font-weight:700; }
+.section-title{ font-size:20px; font-weight:700; margin:12px 0 16px; }
+.table{ background:var(--surface); border-radius:12px; overflow:hidden; }
+.btn-primary{ background:var(--primary); border-color:var(--primary); }
+.badge-soft{ background: #fef3c7; color: #92400e; border-radius: 999px; padding:.35rem .6rem; font-weight:600; }
+.kpi{
+	display:flex; align-items:center; gap:12px;
+}
+.kpi i{ font-size:22px; opacity:.85 }
+.kpi .num{ font-size:28px; font-weight:800; }
+.kpi.success i{ color:var(--success) }
+.kpi.warn i{ color:var(--warning) }
+.kpi.primary i{ color:var(--primary) }
+
+.header-spacer{ height:12px; }
+.container-page{ padding-top:18px; padding-bottom:24px; }
+
+/* auth and media */
+.auth-wrap{ min-height:calc(100vh - 60px); display:flex; align-items:center; justify-content:center; }
+.auth-card{ width:100%; max-width:440px; background:var(--surface); border:1px solid #fde68a; border-radius:16px; box-shadow:0 12px 32px rgba(245,158,11,.18); padding:24px; }
+.auth-card .title{ font-size:20px; font-weight:800; margin-bottom:8px; }
+.auth-card .subtitle{ color:var(--muted); margin-bottom:16px; }
+
+.avatar{ width:36px; height:36px; border-radius:999px; object-fit:cover; border:2px solid #ffffff; box-shadow:0 0 0 2px rgba(245,158,11,.25); }
+.avatar-lg{ width:48px; height:48px; }
+
+.thumb{ width:48px; height:48px; border-radius:10px; object-fit:cover; background:#fff7ed; border:1px solid #fde68a; }
+.thumb-md{ width:64px; height:64px; }
+
+.table-orders td, .table-orders th{ vertical-align:middle; }
+
+/* 顶部导航栏布局 */
+:root {
+  --transition-speed: 0.3s;
+}
+
+/* 认证相关样式 */
+.auth-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.auth-card .subtitle {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+}
+
+/* 错误页面样式 */
+.error-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* 布局容器样式 */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* 内容区域样式 */
+.content {
+  flex: 1;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: var(--surface-muted);
+  overflow-y: auto;
+}
+
+.topbar {
+	position: sticky;
+	top: 0;
+	z-index: 1020;
+	background: var(--surface);
+	border-bottom: 1px solid #e0e0e0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.topbar .right {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+.layout {
+	display: flex;
+	min-height: 100vh;
+	width: 100%;
+}
+
+.layout .content { flex: 1; height: 100vh; overflow-y: auto; }
+
+.layout .content-inner {
+	padding: 24px;
+}
+
+.section{ margin-bottom:18px; }
+.panel{ background:var(--surface); border:1px solid #fde68a; border-radius:14px; padding:16px; box-shadow:0 2px 8px rgba(245,158,11,.15); }
+.panel-title{ font-weight:700; font-size:16px; margin-bottom:10px; }
+.toolbar{ display:flex; gap:8px; align-items:center; justify-content:flex-end; }
+.grid-2{ display:grid; gap:16px; grid-template-columns:1fr 1fr; }
+.grid-3{ display:grid; gap:16px; grid-template-columns:1fr 1fr 1fr; }
+.grid-4{ display:grid; gap:16px; grid-template-columns:repeat(4,1fr); }

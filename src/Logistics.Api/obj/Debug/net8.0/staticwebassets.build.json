@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "9XZSMY6HXC9+TwwjFrAQGFQA46HvWA+nRshaQj3QsqM=",
+  "Source": "Logistics.Api",
+  "BasePath": "_content/Logistics.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Logistics.Api\\wwwroot",
+      "Source": "Logistics.Api",
+      "ContentRoot": "c:\\Users\\MgAl\\Setup\\src\\Logistics.Api\\wwwroot\\",
+      "BasePath": "_content/Logistics.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "c:\\Users\\MgAl\\Setup\\src\\Logistics.Api\\wwwroot\\css\\theme.css",
+      "SourceId": "Logistics.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\MgAl\\Setup\\src\\Logistics.Api\\wwwroot\\",
+      "BasePath": "_content/Logistics.Api",
+      "RelativePath": "css/theme.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\theme.css"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+@model dynamic
+@{    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";}
+
+<h2>站点管理</h2>
+<p>@* 这里是站点管理页面，您可以添加站点列表、搜索、编辑等功能 *@</p>
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h3>站点列表</h3>
+        </div>
+        <div class="col-md-6 text-right">
+            <button class="btn btn-primary">@* 添加站点按钮 *@ 添加站点</button>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="@* 搜索站点名称或编号 *@ 搜索站点名称/编号..." />
+                </div>
+                <div class="col-md-3">
+                    <select class="form-control">
+                        <option value="">@* 站点类型筛选 *@ 所有类型</option>
+                        <option value="Express">快递站点</option>
+                        <option value="SelfPickup">自提点</option>
+                        <option value="Hub">转运中心</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-control">
+                        <option value="">@* 站点状态筛选 *@ 所有状态</option>
+                        <option value="Active">营业中</option>
+                        <option value="Inactive">已关闭</option>
+                        <option value="TemporaryClosed">临时关闭</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-secondary w-100">搜索</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>@* 站点编号列 *@ 站点编号</th>
+                        <th>@* 站点名称列 *@ 站点名称</th>
+                        <th>@* 类型列 *@ 类型</th>
+                        <th>@* 地址列 *@ 地址</th>
+                        <th>@* 联系人列 *@ 联系人</th>
+                        <th>@* 状态列 *@ 状态</th>
+                        <th>@* 操作列 *@ 操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 这里将显示站点数据，您可以使用foreach循环遍历站点列表 -->
+                    <tr>
+                        <td>@* 站点编号占位符 *@ S001</td>
+                        <td>@* 站点名称占位符 *@ 北京朝阳区站点</td>
+                        <td>@* 类型占位符 *@ 快递站点</td>
+                        <td>@* 地址占位符 *@ 北京市朝阳区建国路88号</td>
+                        <td>@* 联系人占位符 *@ 李四</td>
+                        <td>@* 状态占位符 *@ 营业中</td>
+                        <td>
+                            <a href="#" class="btn btn-sm btn-primary">编辑</a>
+                            <a href="#" class="btn btn-sm btn-info">员工</a>
+                            <a href="#" class="btn btn-sm btn-danger">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">上一页</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">下一页</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

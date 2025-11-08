@@ -1,0 +1,140 @@
+@model dynamic
+@{    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";}
+
+<h2>物流追踪管理</h2>
+<p>@* 这里是物流追踪管理页面，您可以添加追踪查询、物流状态管理等功能 *@</p>
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h3>物流追踪查询</h3>
+        </div>
+    </div>
+    
+    <div class="card mb-4">
+        <div class="card-body">
+            <form>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" placeholder="@* 追踪单号输入框 *@ 请输入追踪单号..." />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary btn-lg w-100">查询追踪</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            <h4>@* 追踪详情标题 *@ 追踪详情</h4>
+        </div>
+        <div class="card-body">
+            <div class="mb-4">
+                <div class="row">
+                    <div class="col-md-3">
+                        <strong>追踪单号:</strong>
+                        <span class="ml-2">@* 追踪单号显示 *@ TRK202401010001</span>
+                    </div>
+                    <div class="col-md-3">
+                        <strong>订单号:</strong>
+                        <span class="ml-2">@* 关联订单号显示 *@ O20240101001</span>
+                    </div>
+                    <div class="col-md-3">
+                        <strong>当前状态:</strong>
+                        <span class="ml-2 text-primary">@* 当前状态显示 *@ 运输中</span>
+                    </div>
+                    <div class="col-md-3">
+                        <strong>最后更新:</strong>
+                        <span class="ml-2">@* 最后更新时间 *@ 2024-01-01 15:30</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tracking-timeline">
+                <h5>物流轨迹</h5>
+                <div class="timeline-items">
+                    <!-- 这里将显示物流轨迹，您可以使用foreach循环遍历轨迹列表 -->
+                    <div class="timeline-item active">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <p><strong>@* 物流状态 *@ 【上海】包裹已由【上海转运中心】发出</strong></p>
+                            <p class="text-muted">@* 时间戳 *@ 2024-01-01 15:30:00</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <p><strong>@* 物流状态 *@ 【上海】包裹已到达【上海转运中心】</strong></p>
+                            <p class="text-muted">@* 时间戳 *@ 2024-01-01 10:20:00</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <p><strong>@* 物流状态 *@ 【北京】包裹已由【北京朝阳区站点】揽收</strong></p>
+                            <p class="text-muted">@* 时间戳 *@ 2023-12-31 18:45:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="text-right">
+                <button class="btn btn-primary">@* 更新追踪信息按钮 *@ 更新追踪信息</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .tracking-timeline {
+        margin-top: 20px;
+    }
+    .timeline-items {
+        position: relative;
+        padding-left: 30px;
+    }
+    .timeline-items::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #e9ecef;
+    }
+    .timeline-item {
+        position: relative;
+        padding-bottom: 20px;
+    }
+    .timeline-item:last-child {
+        padding-bottom: 0;
+    }
+    .timeline-marker {
+        position: absolute;
+        left: -30px;
+        top: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #e9ecef;
+        border: 2px solid #dee2e6;
+    }
+    .timeline-item.active .timeline-marker {
+        background: #007bff;
+        border-color: #007bff;
+    }
+    .timeline-content {
+        padding: 10px 15px;
+        background: #f8f9fa;
+        border-radius: 5px;
+    }
+    .timeline-item.active .timeline-content {
+        background: #e7f3ff;
+        border-left: 4px solid #007bff;
+    }
+</style>

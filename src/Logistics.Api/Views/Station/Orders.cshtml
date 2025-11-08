@@ -1,0 +1,107 @@
+@model dynamic
+@{    Layout = "~/Views/Shared/_LayoutStation.cshtml";
+    ViewData["Title"] = "订单管理 - 站点工作台";
+    ViewData["Breadcrumb"] = new List<object> {
+        new { Text = "工作台", Url = "/Station/Index" },
+        new { Text = "订单管理", Url = "/Station/Orders", IsActive = true }
+    };
+}
+
+<div class="page-header">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-title">
+                <h1>订单管理</h1>
+                <p class="text-muted">@* 这里是站点订单管理页面，您可以添加订单列表、搜索、状态更新等功能 *@</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h3>订单列表</h3>
+        </div>
+        <div class="col-md-6 text-right">
+            <button class="btn btn-secondary">@* 导出报表按钮 *@ 导出报表</button>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="@* 搜索订单号或客户信息 *@ 搜索订单号/客户..." />
+                </div>
+                <div class="col-md-3">
+                    <select class="form-control">
+                        <option value="">@* 订单状态筛选 *@ 所有状态</option>
+                        <option value="Pending">待处理</option>
+                        <option value="Processing">处理中</option>
+                        <option value="Shipped">已发货</option>
+                        <option value="Delivered">已送达</option>
+                        <option value="Cancelled">已取消</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-control">
+                        <option value="">@* 配送方式筛选 *@ 所有配送方式</option>
+                        <option value="Express">快递</option>
+                        <option value="Standard">标准配送</option>
+                        <option value="SameDay">当日达</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-secondary w-100">搜索</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>@* 订单号列 *@ 订单号</th>
+                        <th>@* 客户信息列 *@ 客户信息</th>
+                        <th>@* 下单时间列 *@ 下单时间</th>
+                        <th>@* 订单金额列 *@ 订单金额</th>
+                        <th>@* 订单状态列 *@ 订单状态</th>
+                        <th>@* 配送方式列 *@ 配送方式</th>
+                        <th>@* 操作列 *@ 操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 这里将显示订单数据，您可以使用foreach循环遍历订单列表 -->
+                    <tr>
+                        <td>@* 订单号占位符 *@ OD20240101001</td>
+                        <td>@* 客户信息占位符 *@ 张三 (138****1234)</td>
+                        <td>@* 下单时间占位符 *@ 2024-01-01 09:30:00</td>
+                        <td>@* 订单金额占位符 *@ ¥1,299.00</td>
+                        <td><span class="badge badge-info">@* 状态占位符 *@ 处理中</span></td>
+                        <td>@* 配送方式占位符 *@ 快递</td>
+                        <td>
+                            <a href="#" class="btn btn-sm btn-primary">详情</a>
+                            <a href="#" class="btn btn-sm btn-success">更新状态</a>
+                            <a href="#" class="btn btn-sm btn-info">分配配送</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">上一页</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">下一页</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

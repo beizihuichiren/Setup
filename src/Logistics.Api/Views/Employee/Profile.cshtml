@@ -1,0 +1,136 @@
+@model dynamic
+@{    Layout = "~/Views/Shared/_LayoutEmployee.cshtml";
+    ViewData["Title"] = "个人资料 - 员工工作台";
+    ViewData["Breadcrumb"] = new List<object> {
+        new { Text = "工作台", Url = "/Employee/Index" },
+        new { Text = "个人资料", Url = "/Employee/Profile", IsActive = true }
+    };
+}
+
+<div class="page-header">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-title">
+                <h1>个人资料</h1>
+                <p class="text-muted">@* 这里是员工个人资料页面，您可以添加个人信息编辑、密码修改等功能 *@</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h3>基本信息</h3>
+        </div>
+    </div>
+    
+    <div class="card mb-4">
+        <div class="card-body">
+            <form>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="username">@* 用户名标签 *@ 用户名</label>
+                            <input type="text" class="form-control" id="username" value="@* 用户名占位符 *@ employee001" readonly />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="realName">@* 真实姓名标签 *@ 真实姓名</label>
+                            <input type="text" class="form-control" id="realName" value="@* 真实姓名占位符 *@ 张明" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="phone">@* 手机号标签 *@ 手机号码</label>
+                            <input type="tel" class="form-control" id="phone" value="@* 手机号占位符 *@ 138****1234" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">@* 邮箱标签 *@ 电子邮箱</label>
+                            <input type="email" class="form-control" id="email" value="@* 邮箱占位符 *@ zhangming@example.com" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="station">@* 所属站点标签 *@ 所属站点</label>
+                            <input type="text" class="form-control" id="station" value="@* 站点占位符 *@ 上海浦东新区站点" readonly />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="position">@* 职位标签 *@ 职位</label>
+                            <input type="text" class="form-control" id="position" value="@* 职位占位符 *@ 配送员" readonly />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="hireDate">@* 入职日期标签 *@ 入职日期</label>
+                            <input type="date" class="form-control" id="hireDate" value="@* 入职日期占位符 *@ 2023-06-15" readonly />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="status">@* 状态标签 *@ 在职状态</label>
+                            <select class="form-control" id="status">
+                                <option value="Active">@* 在职选项 *@ 在职</option>
+                                <option value="Leave">@* 休假选项 *@ 休假</option>
+                                <option value="Resigned">@* 离职选项 *@ 离职</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-primary">@* 保存按钮 *@ 保存修改</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h3>修改密码</h3>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="currentPassword">@* 当前密码标签 *@ 当前密码</label>
+                            <input type="password" class="form-control" id="currentPassword" placeholder="@* 当前密码占位符 *@ 请输入当前密码" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="newPassword">@* 新密码标签 *@ 新密码</label>
+                            <input type="password" class="form-control" id="newPassword" placeholder="@* 新密码占位符 *@ 请输入新密码" />
+                            <small class="form-text text-muted">@* 密码要求说明 *@ 密码长度至少8位，包含字母和数字</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="confirmPassword">@* 确认密码标签 *@ 确认新密码</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="@* 确认密码占位符 *@ 请再次输入新密码" />
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-primary">@* 修改密码按钮 *@ 修改密码</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

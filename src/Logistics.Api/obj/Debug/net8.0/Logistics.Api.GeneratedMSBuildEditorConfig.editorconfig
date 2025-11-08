@@ -1,0 +1,139 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Logistics.Api
+build_property.RootNamespace = Logistics.Api
+build_property.ProjectDir = c:\Users\MgAl\Setup\src\Logistics.Api\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\MgAl\Setup\src\Logistics.Api
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Admin/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWNjZXNzRGVuaWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Admin/AfterSales.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWZ0ZXJTYWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Admin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Admin/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cT3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Admin/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Admin/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Admin/Stations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3RhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Admin/Tracking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVHJhY2tpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Admin/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Admin/Warehouses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cV2FyZWhvdXNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Employee/Earnings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWFybmluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Employee/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Employee/Operations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcT3BlcmF0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Employee/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcT3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Employee/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Employee/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Shared/404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXDQwNC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Shared/_LayoutEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRFbXBsb3llZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Shared/_LayoutStation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRTdGF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Station/AfterSales.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvblxBZnRlclNhbGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Station/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Station/Inventory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvblxJbnZlbnRvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Station/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvblxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Station/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvblxPcmRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Station/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvblxQcm9kdWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/MgAl/Setup/src/Logistics.Api/Views/Station/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvblxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
